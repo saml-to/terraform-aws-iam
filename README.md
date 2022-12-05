@@ -1,16 +1,18 @@
-[![Maintained by Scaffoldly](https://img.shields.io/badge/maintained%20by-scaffoldly-blueviolet)](https://github.com/scaffoldly)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/scaffoldly/CHANGEME)
-![Terraform Version](https://img.shields.io/badge/tf-%3E%3D1.0.4-blue.svg)
+[![Maintained by Scaffoldly](https://img.shields.io/badge/maintained%20by-saml-to-blueviolet)](https://github.com/saml-to)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/saml-to/terraform-aws-iam)
+![Terraform Version](https://img.shields.io/badge/tf-%3E%3D1.0.0-blue.svg)
 
 ## Description
 
-CHANGEME
+Install SAML.to as an IAM Provider to an AWS Account.
 
 ## Usage
 
 ```hcl
-module "CHANGME" {
-
+module "saml_to" {
+  source  = "saml-to/iam/aws"
+  
+  organization = "your_github_user_or_organization"
 }
 ```
 

@@ -1,10 +1,10 @@
-variable "organization" {
+variable "owner" {
   type        = string
-  description = "The GitHub Orgranization"
+  description = "A GitHub User or Orgranization"
 }
 
-variable "provider_name" {
+variable "provider_name_prefix" {
   type        = string
-  description = "The desired name of the AWS IAM SAML Provider"
+  description = "Prefix for the name of the AWS IAM SAML Provider"
   default     = "saml.to"
 }

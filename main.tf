@@ -7,7 +7,7 @@ data "http" "metadata" {
 }
 
 resource "aws_iam_saml_provider" "provider" {
-  name                   = "saml.to"
+  name                   = var.provider_name
   saml_metadata_document = data.http.metadata.response_body
 }
 

@@ -1,4 +1,3 @@
-[![Maintained by Scaffoldly](https://img.shields.io/badge/maintained%20by-saml-to-blueviolet)](https://github.com/saml-to)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/saml-to/terraform-aws-iam)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D1.0.0-blue.svg)
 

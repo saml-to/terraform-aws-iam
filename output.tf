@@ -18,6 +18,18 @@ output "trust_policy" {
   description = "A policy, in JSON format, that can be added to Role Trust Relationships"
 }
 
+output "trust" {
+  value = {
+    trust_actions                 = local.trust_actions
+    trust_principal_identifiers   = [aws_iam_saml_provider.provider.arn]
+    trust_principal_type          = local.trust_principal_type
+    trust_condition_saml_test     = local.trust_condition_saml_test
+    trust_condition_saml_variable = local.trust_condition_saml_variable
+    trust_condition_saml_values   = local.trust_condition_saml_values
+  }
+  description = "A map of values for an IAM Trust Relationship containing the following keys: `trust_actions`, `trust_principal_identifiers`, `trust_principal_type`, `trust_condition_saml_test`, `trust_condition_saml_variable`, and `trust_condition_saml_values`"
+}
+
 output "trust_actions" {
   value       = local.trust_actions
   description = "The IAM Trust Relationship Actions (`[\"sts:AssumeRoleWithSAML\"]`)"

@@ -1,0 +1,26 @@
+name: Release Published
+on:
+  release:
+    types: [published]
+jobs:
+  postrelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.4
+      - uses: actions/cache@v2
+        with:
+          path: ./.terraform/providers
+          key: ${{ runner.os }}-providers-${{ hashFiles('**/.terraform.lock.hcl') }}
+          restore-keys: |
+            ${{ runner.os }}-providers-
+      - run: terraform init
+      - run: terraform fmt -check -recursive -diff
+      - run: terraform validate
+      - uses: scaffoldly/bump-version-action@v1
+        with:
+          action: postrelease
+          version-file: sly.json
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

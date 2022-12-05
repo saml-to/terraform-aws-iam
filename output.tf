@@ -1,5 +1,5 @@
 output "owner" {
-  value = var.owner
+  value       = var.owner
   description = "Re-output of `var.owner`"
 }
 

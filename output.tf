@@ -20,7 +20,7 @@ output "trust_policy" {
 
 output "trust_actions" {
   value       = local.trust_actions
-  description = "The IAM Trust Relationship Actions (`[sts:AssumeRoleWithSAML]`)"
+  description = "The IAM Trust Relationship Actions (`[\"sts:AssumeRoleWithSAML\"]`)"
 }
 
 output "trust_principal_identifiers" {
@@ -45,5 +45,5 @@ output "trust_condition_saml_variable" {
 
 output "trust_condition_saml_values" {
   value       = local.trust_condition_saml_values
-  description = "The IAM Trust Relationship Condition Values for SAML (`[https://signin.aws.amazon.com/saml]`)"
+  description = "The IAM Trust Relationship Condition Values for SAML (`[\"https://signin.aws.amazon.com/saml\"]`)"
 }

@@ -10,7 +10,7 @@ output "provider_arn" {
 
 output "provider_name" {
   value       = local.provider_name
-  description = "The name of the AWS IAM SAML Provider (default: `{var.provider_name_prefix}-{var.owner}`)"
+  description = "The name of the AWS IAM SAML Provider (`{var.provider_name_prefix}-{var.owner}`)"
 }
 
 output "trust_policy" {

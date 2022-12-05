@@ -100,9 +100,9 @@ No modules.
 | <a name="output_owner"></a> [owner](#output\_owner) | Re-output of `var.owner` |
 | <a name="output_provider_arn"></a> [provider\_arn](#output\_provider\_arn) | The ARN of the AWS IAM SAML Provider |
 | <a name="output_provider_name"></a> [provider\_name](#output\_provider\_name) | The name of the AWS IAM SAML Provider (default: `{var.provider_name_prefix}-{var.owner}`) |
-| <a name="output_trust_actions"></a> [trust\_actions](#output\_trust\_actions) | The IAM Trust Relationship Actions (`[sts:AssumeRoleWithSAML]`) |
+| <a name="output_trust_actions"></a> [trust\_actions](#output\_trust\_actions) | The IAM Trust Relationship Actions (`["sts:AssumeRoleWithSAML"]`) |
 | <a name="output_trust_condition_saml_test"></a> [trust\_condition\_saml\_test](#output\_trust\_condition\_saml\_test) | The IAM Trust Relationship Condition Test for SAML (`StringEquals`) |
-| <a name="output_trust_condition_saml_values"></a> [trust\_condition\_saml\_values](#output\_trust\_condition\_saml\_values) | The IAM Trust Relationship Condition Values for SAML (`[https://signin.aws.amazon.com/saml]`) |
+| <a name="output_trust_condition_saml_values"></a> [trust\_condition\_saml\_values](#output\_trust\_condition\_saml\_values) | The IAM Trust Relationship Condition Values for SAML (`["https://signin.aws.amazon.com/saml"]`) |
 | <a name="output_trust_condition_saml_variable"></a> [trust\_condition\_saml\_variable](#output\_trust\_condition\_saml\_variable) | The IAM Trust Relationship Condition Variable for SAML (`SAML:aud`) |
 | <a name="output_trust_policy"></a> [trust\_policy](#output\_trust\_policy) | A policy, in JSON format, that can be added to Role Trust Relationships |
 | <a name="output_trust_principal_identifiers"></a> [trust\_principal\_identifiers](#output\_trust\_principal\_identifiers) | The IAM Trust Relationship Principal Identifiers (a single-item list containing the Provider ARN) |

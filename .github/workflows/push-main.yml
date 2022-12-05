@@ -5,12 +5,21 @@ on:
     branches: [main]
 jobs:
   prerelease:
+    strategy:
+      fail-fast: false
+      matrix:
+        terraform-version:
+          - "~1.0.0"
+          - "~1.1.0"
+          - "~1.2.0"
+          - "~1.3.0"
+          - "latest"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 1.0.4
+          terraform_version: ${{ matrix.terraform-version }}
       - uses: actions/cache@v2
         with:
           path: ./.terraform/providers

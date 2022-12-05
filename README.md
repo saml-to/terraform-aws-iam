@@ -89,9 +89,10 @@ No modules.
 
 ## Inputs
 
-| Name                                                                  | Description              | Type     | Default | Required |
-| --------------------------------------------------------------------- | ------------------------ | -------- | ------- | :------: |
-| <a name="input_organization"></a> [organization](#input_organization) | The GitHub Orgranization | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_organization"></a> [organization](#input\_organization) | The GitHub Orgranization | `string` | n/a | yes |
+| <a name="input_provider_name"></a> [provider\_name](#input\_provider\_name) | The desired name of the AWS IAM SAML Provider | `string` | `"saml.to"` | no |
 
 ## Outputs
 

@@ -35,7 +35,8 @@ jobs:
           chmod +x terraform-docs
         working-directory: .terraform
       - run: ./.terraform/terraform-docs markdown . --output-file README.md
-      - uses: scaffoldly/bump-version-action@v1
+      - if: ${{ matrix.terraform-version == 'latest' }}
+        uses: scaffoldly/bump-version-action@v1
         with:
           action: prerelease
           version-file: sly.json
